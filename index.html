@@ -81,9 +81,9 @@ EmojiMosaic.prototype.imageLoaded = function() {
 			createSample,
 			samples,
 			ratio;
-	margin = 100;
+	margin = 0;
 	// If the image is too big, make the dimensions smaller.
-	ratio = ( window.innerWidth ) / ( this.img.width + 100 * 2 );
+	ratio = ( window.innerWidth ) / ( this.img.width * 2 );
 	this.img.height *= ratio;
 	this.img.width *= ratio;
 	// A canvas element for extracting image pixel color data.
