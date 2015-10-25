@@ -100,13 +100,13 @@ EmojiMosaic.prototype.imageLoaded = function() {
 
 	// A canvas element that will be drawn to with Emoji.
 	this.targetCanvas = document.createElement('canvas');
-	this.targetCanvas.width = this.extractionCanvas.width + margin * 2;
-	this.targetCanvas.height = this.extractionCanvas.height + margin * 2;
+	this.targetCanvas.width = this.extractionCanvas.width * 2;
+	this.targetCanvas.height = this.extractionCanvas.height * 2;
 
 	this.targetCanvasContext = this.targetCanvas.getContext('2d');
 
 	// Fill a background.
-	this.targetCanvasContext.fillStyle = '#ffffff';
+	this.targetCanvasContext.fillStyle = '#ffffff';m
 	this.targetCanvasContext.fillRect( 0, 0, this.targetCanvas.width, this.targetCanvas.height );
 
 	document.body.appendChild( this.targetCanvas );
